@@ -2,14 +2,14 @@
     'use strict';
 
     angular
-        .module('todo', []);
+        .module('toDoList', []);
 })();
 
 (function() {
     'use strict';
 
     angular
-        .module('todo')
+        .module('toDoList')
         .controller('ToDoController', ToDoController);
 
     ToDoController.$inject = [];
@@ -17,7 +17,7 @@
     /* @ngInject */
     function ToDoController() {
         var vm = this;
-        vm.start = "To Do:";
+
         vm.item = "";
 
 vm.addItem = function() {
@@ -36,4 +36,5 @@ vm.alpha = function() {
 
 }
         }
+    }
 })();

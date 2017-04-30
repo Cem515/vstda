@@ -14522,7 +14522,7 @@ function $LogProvider() {
           forEach(arguments, function(arg) {
             args.push(formatError(arg));
           });
-          return logFn.apply(console);
+          return logFn.apply(console, args);
         };
       }
 

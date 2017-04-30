@@ -1,20 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='toDoList'>
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="styles.css">
   <title>Gulp Demo</title>
-<!-- bower:css -->
-<!-- endbower -->
+  <h1 id="main"> To Do List</h1>
+  <!-- bower:css -->
+  <!-- endbower -->
 
-<!-- inject:css -->
-<!-- endinject -->
+  <!-- inject:css -->
+
+  <!-- endinject -->
 </head>
 
-<body>
-<!-- bower:js -->
-<!-- endbower -->
-<h1>HEya</h1>
-<!-- inject:js -->
-<!-- endinject -->
+<body ng-controller="ToDoController as vm">
+  <input type="text" class="form-control" placeholder="To Do List Item" ng-model="vm.item">
+
+  <select class="form-control" ng-model="vm.priorities">
+    <option value="3">High Priority</option>
+    <option value="2">Medium Priority</option>
+    <option value="1">Low Priority</option>
+  </select>
+
+  <button type="button" class="btn btn-primary" ng-click="vm.addItem()">Add Item</button>
+
+  <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="vm.priority()">Sort by Priority</button>
+<button type="button" class="btn btn-default btn-lg btn-block" ng-click="vm.alpha()">Sort Alphabetically</button>
+
+
+<ul ng-bind-html="vm.start">To Do:
+  <li ng-repeat="vm.item in vm.item">{{vm.item}}</li>
+</ul>
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+
+  <!-- endbower -->
+  <!-- inject:js -->
+  <!-- endinject -->
 </body>
+
 </html>
