@@ -15,7 +15,6 @@
     var vm = this;
     var value = vm.priorities
     vm.toDoItem = "";
-    vm.priorities = 1;
     vm.toDoList = [];
     vm.sort = 'value';
     vm.reverse = false;
@@ -28,7 +27,7 @@
     }
 
     vm.sortBy = function(){
-      
+
 
     }
   }
