@@ -29,7 +29,7 @@
   <button class="add-btn" type="button" ng-click="vm.addItem()">Add Item</button>
 
   <ul>To Do:
-    <li ng-bind="::vm.toDoObject.toDoItem" ng-repeat="toDo in vm.toDoList track by $index| orderBy:'toDo'" ng-class="::{'high':vm.toDoObject.priorities ==3, 'medium':vm.toDoObject.priorities ==2, 'low':vm.toDoObject.priorities ==1}">
+    <li ng-bind="::vm.toDoObject.toDoItem" ng-repeat="toDo in vm.toDoList | orderBy:'toDo':false" ng-class="::{'high':vm.toDoObject.priorities ==3, 'medium':vm.toDoObject.priorities ==2, 'low':vm.toDoObject.priorities ==1}">
     </li>
 
   </ul>
@@ -37,10 +37,7 @@
 
 
   <!-- bower:js -->
-  <script src="bower_components/angular/angular.js"></script>
-
-  <script type='text/javascript' src="toDoController.js"></script>
-
+  <script src='bower_components/angular/angular.js'></script>
   <!-- endbower -->
   <!-- inject:js -->
   <!-- endinject -->
