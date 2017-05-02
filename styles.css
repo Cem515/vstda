@@ -1,11 +1,11 @@
-.High {
-   background-color: red;
+.high {
+   background-color: #F08080;
 }
 
-.Medium {
+.medium {
    background-color: yellow;
 }
 
-.Low {
-   background-color: green;
+.low {
+   background-color: #00FF00;
 }
