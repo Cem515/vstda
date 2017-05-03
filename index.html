@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="">
-  <link rel="stylesheet" href="styles.css">
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+
+<!-- inject:css -->
+<link rel="stylesheet" href="/app/styles/styles.css">
+<!-- endinject -->
   <title>Gulp Demo</title>
   <h1 id="main"> To Do List</h1>
 
@@ -17,7 +23,7 @@
   <input type="text" class="form-control" placeholder="To Do List Item" ng-model="vm.toDoObject.toDoItem">
 
 
-  <select class="form-control" ng-model="vm.toDoObject.priorities">
+  <select class="form-control" ng-model="vm.toDoObject.priorities" placeholder ="Priority Level">
     <option value="3">High Priority</option>
     <option value="2">Medium Priority</option>
     <option value="1">Low Priority</option>
@@ -37,9 +43,12 @@
 
 
   <!-- bower:js -->
-  <script src='bower_components/angular/angular.js'></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <!-- endbower -->
   <!-- inject:js -->
+  <script src="/app/app.js"></script>
+  <script src="/app/todo.controller.js"></script>
   <!-- endinject -->
 </body>
 
