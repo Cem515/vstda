@@ -40,12 +40,10 @@
 
 <!-- To Do List  -->
   <ul class="list">To Do:
-    <li class ="list" ng-bind="::vm.toDoObject.toDoItem" ng-repeat="toDo in vm.toDoList | orderBy:sortField" ng-class="::{'high':vm.toDoObject.priorities ==3, 'medium':vm.toDoObject.priorities ==2, 'low':vm.toDoObject.priorities ==1}">
+    <li class ="list" ng-bind="::vm.toDoObject.toDoItem" ng-repeat="toDo in vm.toDoList | orderBy:sortField" ng-class="::{'high':vm.toDoObject.priorities ==1, 'medium':vm.toDoObject.priorities ==2, 'low':vm.toDoObject.priorities ==3}">
     </li>
 
   </ul>
-
-
 
   <!-- bower:js -->
   <script src="bower_components/angular/angular.js"></script>
